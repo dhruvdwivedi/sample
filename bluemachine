@@ -1,0 +1,25 @@
+
+Blue Machine Commands
+
+*******************************************************************************
+
+sudo ip netns add blue
+
+sudo ip link set veth1 netns blue
+
+sudo ip netns exec blue ip link list
+
+sudo ip netns exec blue ip addr add 172.168.1.10/24 dev veth1
+
+sudo ip netns exec blue ip link set dev veth1 up
+
+
+
+
+
+To Login to BLue machine
+
+*******************************************************************************
+
+sudo ip netns exec blue /bin/bash
+

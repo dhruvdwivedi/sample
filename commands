@@ -1,0 +1,18 @@
+commands to run/output:
+
+root@ubuntu-pc-exp:~# sudo ./udpserver.py
+
+sudo: unable to resolve host ubuntu-pc-exp: Resource temporarily unavailable
+
+172.168.1.10
+
+Waiting for client...
+
+
+
+Waiting for client...
+
+b'Dhruv : UPF End to End Flow'
+
+Waiting for client...
+

@@ -1,0 +1,32 @@
+Main Machine Commands
+
+*******************************************************************************
+
+sudo ip link add veth0 type veth peer name veth1
+
+sudo ip addr add 172.168.1.2/24 dev veth0
+
+sudo ip link set dev veth0 up
+
+Start the Test on Main Machine
+
+===============================================================================
+
+yogeshp@ubuntu-pc-exp:~/SAMPLE_PGM/PKT_GEN_PFCP/scapy$ sudo ./run_scapy
+
+
+
+>>> from scapy.all import *
+
+)>> send(IP(src="172.168.1.2", dst="172.168.1.10")/UDP(sport=2152,dport=2152)/Raw(load="Dhruv : UPF End to End Flow"))
+
+.
+
+Sent 1 packets.
+
+>>>
+send(IP(src="172.168.1.2", dst="172.168.1.10")/UDP(sport=2152,dport=2152)/Raw(load="Dhruv : UPF End to End Flow"))
+
+
+
+

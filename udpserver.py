@@ -1,10 +1,36 @@
+#!/usr/bin/python3.6
+
 import socket
-import math
-sock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-sock.bind(('127.0.0.1',2152))
+
+
+
+sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)      # For UDP
+
+
+
+udp_host = '172.168.1.10'
+
+udp_port = 2152
+
+
+
+print (udp_host)
+
+#print type(sock) ============> 'type' can be used to see type
+
+# of any variable ('sock' here)
+
+
+
+sock.bind((udp_host,udp_port))
+
+
+
 while True:
-	data,addr=sock.recvfrom(4096)
-	print(int(data))
-	num=int(data)**0.5
-	message=bytes("hey sqrt is r"+str(num),encoding='utf-8')
-	sock.sendto(message,addr)
+
+    print ("Waiting for client...")
+
+    data,addr = sock.recvfrom(1024)
+
+    print (data)
+
